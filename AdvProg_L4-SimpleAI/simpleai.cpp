@@ -45,7 +45,7 @@ char nextCharWhenWordIsNotInDictionary(const set<char>& selectedChars)
 {
     char answer = 'a';
     //Write your code here
-    while ( selectedChars.count(answer) > ) answer++;
+    while ( selectedChars.count(answer) > 0) answer++;
     return answer;
 }
 
