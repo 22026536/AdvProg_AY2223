@@ -18,7 +18,7 @@ int generateRandomNumber(const int min, const int max)
 {
     // TODO: Return a random integer number between min and max
     srand(time(0));
-    return rand()%(max-min)+min;
+    return rand()%(max-min+1)+min;
 }
 
 vector<string> readWordListFromFile(const string& filePath)
@@ -54,7 +54,7 @@ bool isCharInWord(const char ch, const string& word)
     // TODO: return true if ch is in word else return false
     int X = word.find(ch);
     int Y = word.length();
-    if(X>0&&X<Y-1) return true;
+    if(X >=0 && X<=Y-1) return true;
     return false;
 }
 
