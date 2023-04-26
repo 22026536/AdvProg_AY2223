@@ -104,9 +104,14 @@ char findBestChar(const vector<string>& candidateWords, const set<char>& selecte
 {
     char answer;
     //Write your code here
-    map <char,int> occurrences = countOccurrences (candidateWords);
-    answer = findMostFrequentChar (occurrences, selectedChars);
-    return answer;
+    set<char> outside;
+    for(char c= 'a'; c<='z';c++){
+        if(selectedChars.find(c)==selectedChars.end()){
+            outside.insert(c);
+        }
+    }
+    answer = findMostFrequentChar(countOccurrences(candidateWords),outside);
+    return answer
 }
 
 string getWordMask(char nextChar)
