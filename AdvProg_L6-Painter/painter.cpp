@@ -24,7 +24,7 @@ void Painter::setColor(SDL_Color color)
 void Painter::jumpForward(int numPixel)
 {
     // TODO: jump the painter forward
-    float rad=(angle/180)*M_Pi;
+    float rad=(angle/180)*M_PI;
     this->x+=cos(rad)*numPixel;
     this->y-=sin(rad)*numPixel;
 }
@@ -52,7 +52,7 @@ void Painter::jumpBackward(int numPixel)
 void Painter::turnLeft(double degree)
 {
     // TODO: rotate left the painter   
-    double ang=this->angel+degree;
+    double ang=this->angle+degree;
     if(ang>360) ang-=360;
     setAngle(ang);
 }
