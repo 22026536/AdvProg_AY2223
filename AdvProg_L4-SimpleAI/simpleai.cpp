@@ -111,7 +111,7 @@ char findBestChar(const vector<string>& candidateWords, const set<char>& selecte
         }
     }
     answer = findMostFrequentChar(countOccurrences(candidateWords),outside);
-    return answer
+    return answer;
 }
 
 string getWordMask(char nextChar)
