@@ -25,7 +25,7 @@ Snake::~Snake()
             p = nextNode;
     }
     */
-    for (SnakeNode *p = tail; p!=nullptr){
+    for (SnakeNode *p = tail; p!=nullptr;){
         SnakeNode *nextNode=p->next;
         delete p;
         p = nextNode;
@@ -36,7 +36,7 @@ Snake::~Snake()
 vector<Position> Snake::getPositions() const
 {
     vector<Position> res;
-    for (SnakeNode* p = tail; p != nullptr; p = p->next)
+    for (SnakeNode *p = tail; p != nullptr; p = p->next)
         res.push_back(p->position);
     return res;
 }
@@ -59,7 +59,7 @@ void Snake::growAtFront(Position newPosition)
     // head of snake grow at new position
 	
     /* YOUR CODE HERE */
-    head->next = new SnakeNode(newPosition,, nullptr);
+    head->next = new SnakeNode(newPosition, nullptr);
     head = head->next;
 }
 
@@ -97,7 +97,7 @@ void Snake::slideTo(Position newPosition)
 		SnakeNode *oldTailNode = tail;
 		//cut the old tail off the snake
         /* YOUR CODE HERE */
-        tail tail->next;
+        tail = tail->next;
         oldTailNode->next = nullptr;
 		
 		// move it to the head of the snake
